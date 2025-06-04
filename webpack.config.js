@@ -10,6 +10,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(ttf|otf|eot|svg|woff|woff2)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.mjs$/,
+        type: 'javascript/auto',
+      },
+      {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
